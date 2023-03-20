@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
-        "browser": true,
-        "es2021": true
+        "browser": false,
+        "es6": true,
+        "jest": true
     },
     "extends": "eslint:recommended",
     "overrides": [

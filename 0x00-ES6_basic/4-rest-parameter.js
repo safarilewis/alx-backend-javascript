@@ -1,3 +1,3 @@
-export default function (...args) {
-  return args.length;
+export default function (...restParams) {
+  return restParams.length;
 }

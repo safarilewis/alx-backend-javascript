@@ -6,7 +6,7 @@ export default function getResponseFromAPI(success) {
       reject("The fake API is not working currently");
     }
   });
-  p.catch((err)=>{
+  p.catch((err) => {
     return err;
   })
   return p;

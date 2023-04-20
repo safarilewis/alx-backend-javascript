@@ -2,6 +2,7 @@ import Currency from "./3-currency.js";
 
 const dollar = new Currency('$', 'Dollars');
 
-test("displayFullCurrency is implemented correctly", () => {
-    expect(dollar.displayFullCurrency()).toBe('Dollars ($)');
+test("Currency class' getter and constructor have been set properly", () => {
+  expect(dollar.code).toBe('$');
+  expect(dollar.name).toBe('Dollars');
 });

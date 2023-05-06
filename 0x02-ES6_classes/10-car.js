@@ -5,6 +5,18 @@ export default class Car {
     this.__color = color;
   }
 
+  set brand(brand) {
+    this.__brand = brand;
+  }
+
+  set motor(motor) {
+    this.__motor = motor;
+  }
+
+  set color(color) {
+    this.__color = color;
+  }
+
   get brand() {
     return this.__brand;
   }

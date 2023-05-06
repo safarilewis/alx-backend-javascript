@@ -29,6 +29,10 @@ export default class Car {
     return this.__color;
   }
 
+  static get [Symbol.species]() {
+    return this;
+  }
+
   cloneCar() {
     return new this.constructor[Symbol.species]();
   }

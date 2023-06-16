@@ -8,9 +8,9 @@ const countStudents = (file) => {
     const content = fs.readFileSync(file, 'utf-8');
     const fileLines = content.toString().split('\n');
     for (let x = 0; x < fileLines.length; x += 1) {
-      if (fileLines[1]) {
+      if (fileLines[x]) {
         fileLength += 1;
-        const dbField = fileLines[1].toString().split(',');
+        const dbField = fileLines[x].toString().split(',');
         if (Object.prototype.hasOwnProperty.call(students, dbField[3])) {
           students[dbField[3]].push(dbField[0]);
         } else {

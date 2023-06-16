@@ -4,8 +4,9 @@ process.stdin.on('readable', function () {
   const chunk = process.stdin.read();
   if (chunk !== null) {
     process.stdout.write(`Your name is: ${chunk}`);
+    process.exit();
   }
-})
-process.on('end', function () {
+});
+process.on('exit', function () {
   process.stdout.write('This important software is now closing\n');
 })

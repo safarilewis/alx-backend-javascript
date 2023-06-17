@@ -1,6 +1,5 @@
 const http = require('http');
 
-
 const app = http.createServer((__, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');

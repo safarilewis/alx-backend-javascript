@@ -15,13 +15,13 @@ app.get('/cart/:id([0-9]+)', (request, response) => {
 
 app.get('/available_payments', (request, response) => {
     response.set("Content-Type", "application/json");
-    const available_pay = {
+    const payMethods = {
 	payment_methods: {
           credit_cards: true,
           paypal: false
 	}
     }
-    response.send(available_pay);
+    response.send(payMethods);
 });
 
 app.post('/login', (request, response) => {

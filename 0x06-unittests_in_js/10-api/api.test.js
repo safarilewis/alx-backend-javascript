@@ -36,13 +36,13 @@ describe("Cart page", function () {
       done();
     });
   });
-  it("check correct content for correct url", function (done) {
+  it("check", function (done) {
     request.get("http://localhost:7865/cart/12", function (err, res, body) {
       expect(body).to.equal("Payment methods for cart 12");
       done();
     });
   });
-  it("check correct status code for incorrect url", function (done) {
+  it("check ", function (done) {
     request.get("http://localhost:7865/cart/kim", function (err, res, body) {
       expect(res.statusCode).to.equal(404);
       done();
@@ -51,7 +51,7 @@ describe("Cart page", function () {
 });
 
 describe("Available_payments page", function () {
-  it("check correct status for correct url", function () {
+  it("check ", function () {
     request.get("http://localhost:7865/available_payments", (err, res, body) => {
       if (err) {
         expect(res.statusCode).to.not.equal(200);

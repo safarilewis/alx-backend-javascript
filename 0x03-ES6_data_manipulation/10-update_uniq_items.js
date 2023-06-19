@@ -3,7 +3,7 @@ export default function updateUniqueItems(item) {
     throw new Error('Cannot process');
   }
   item.forEach((val, key) => {
-    // eslint-disable-next-line
+    // eslint-disable-next-line no-unused-expressions
     val === 1 ? item.set(key, 100) : null;
   });
 }

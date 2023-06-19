@@ -1,4 +1,4 @@
-export const weakMap = WeakMap();
+export const weakMap = new WeakMap();
 const MAX = 5;
 export default function queryAPI(endpoint) {
   // eslint-disable-next-line

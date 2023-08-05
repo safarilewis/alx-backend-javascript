@@ -7,7 +7,7 @@ class StudentsController {
     const dataPath = process.argv.length > 2 ? process.argv[2] : '';
 
     readDatabase(dataPath)
-      .then((studentGroups) => {
+      .then((groups) => {
         const responseParts = ['This is the list of our students'];
         // A comparison function for ordering a list of strings in ascending
         // order by alphabetic order and case insensitive
@@ -21,7 +21,7 @@ class StudentsController {
           return 0;
         };
 
-        for (const [field, group] of Object.entries(studentGroups).sort(cmpFxn)) {
+        for (const [field, group] of Object.entries(groups).sort(cmpFxn)) {
           responseParts.push([
             `Number of students in ${field}: ${group.length}.`,
             'List:',
@@ -46,11 +46,11 @@ class StudentsController {
       return;
     }
     readDatabase(dataPath)
-      .then((studentGroups) => {
+      .then((groups) => {
         let responseText = '';
 
-        if (Object.keys(studentGroups).includes(major)) {
-          const group = studentGroups[major];
+        if (Object.keys(groups).includes(major)) {
+          const group = groups[major];
           responseText = `List: ${group.map((student) => student.firstname).join(', ')}`;
         }
         response.status(200).send(responseText);
